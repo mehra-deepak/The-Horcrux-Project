@@ -104,37 +104,35 @@ int main()
 {
       
     srand(time(NULL)); 
+
+    cout<<"Generating secret key kindly store it for future reference...."<<endl;
     
     int n=16;
     string keyStr = printRandomString(n); 
-    cout<<keyStr<<endl;
-
-
+    
+    cout << "The key is:"<<keyStr<<endl;
     
     byte key[16];   
     charToByte(key, keyStr.c_str()); 
 
-
     // Key Expansion
     word w[4*(Nr+1)];  
     KeyExpansion(key, w); 
-
-    cout << "The key is:";  
-    for(int i=0; i<16; ++i)  
-    cout << hex << key[i].to_ulong() << " ";  
+    
     cout << endl; 
 
 
     bitset<128> data;  
 
-    byte plain[16];  
+    byte plain[16]; 
 
+    cout<<"Encrypting the File."<<endl;
 
     // Encrypt
 
     ifstream in;  
     ofstream out;  
-    in.open("flower.jpg", ios::binary);  
+    in.open("testFile.txt", ios::binary);  
     out.open("cipher.txt", ios::binary);  
 
     while(in.read((char*)&data, sizeof(data)))  
@@ -148,6 +146,7 @@ int main()
     in.close();  
     out.close();  
 
+    cout<<"File Encrypted Successfully."<<endl;
 
     ifstream in_file("cipher.txt", ios::binary);
     in_file.seekg(0, ios::end);
@@ -156,19 +155,15 @@ int main()
 
     int chunkSize;
 	cout<<endl;
-	cout<<"Enter how many chunks you want to create : ";
+	cout<<"Enter how many chunks you want to create : "<<endl;
 	cin>>chunkSize;
 
 	int chunkByte = file_size/chunkSize;
 
-	cout<<chunkByte+1;
-    cout<<endl;
-    cout<<(chunkByte+1)*n;
-
-
 
     // Code for dividing into chunks.
 
+    cout<<"Creating the File Chunks."<<endl;
 
     chunkFile("cipher.txt", "chunk", chunkByte+1);
 
@@ -179,11 +174,14 @@ int main()
 
     if(decryptKey==keyStr)
     {
+        cout<<"The Key is Right."<<endl;
+        cout<<"Regrouping the File."<<endl;
+
         joinFile("chunk", "regrouped.txt");
 
 
         in.open("regrouped.txt", ios::binary);  
-        out.open("flower1.jpg", ios::binary);  
+        out.open("DecryptedText.txt", ios::binary);  
         while(in.read((char*)&data, sizeof(data)))  
         {  
             divideToByte(plain, data);  
@@ -194,6 +192,8 @@ int main()
         }  
         in.close();  
         out.close();  
+
+        cout<<"File has been Decrypted Successfully."<<endl;
 
        
     }

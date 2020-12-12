@@ -4,7 +4,8 @@
 
 
 // Chunks a file by breaking it up into chunks of "chunkSize" bytes.
-void chunkFile(char *fullFilePath, char *chunkName, unsigned long chunkSize) {
+void chunkFile(char *fullFilePath, char *chunkName, unsigned long chunkSize) 
+{
 	ifstream fileStream;
 	fileStream.open(fullFilePath, ios::in | ios::binary);
 
