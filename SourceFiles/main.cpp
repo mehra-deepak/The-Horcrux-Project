@@ -118,13 +118,21 @@ int main()
     // Key Expansion
     word w[4*(Nr+1)];  
     KeyExpansion(key, w); 
-    
-    cout << endl; 
+
+    cout<<endl; 
 
 
     bitset<128> data;  
 
     byte plain[16]; 
+
+    // Ask for location of the file.
+
+    cout<<"Enter the Path of the File you want to encrypt."<<endl;
+
+    string path;
+    getline(cin,path);
+
 
     cout<<"Encrypting the File."<<endl;
 
@@ -132,7 +140,8 @@ int main()
 
     ifstream in;  
     ofstream out;  
-    in.open("testFile.txt", ios::binary);  
+
+    in.open(path.c_str(),ios::in); 
     out.open("cipher.txt", ios::binary);  
 
     while(in.read((char*)&data, sizeof(data)))  
