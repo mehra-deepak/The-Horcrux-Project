@@ -4,6 +4,7 @@
 #include <iostream>  
 #include <string>  
 #include <ctime>
+#include<dirent.h>
 using namespace std;   
 
 // Utility Header Files.
@@ -157,10 +158,21 @@ int main()
 
     cout<<"File Encrypted Successfully."<<endl;
 
-    ifstream in_file("cipher.txt", ios::binary);
+
+    // after the path of file is being taken a new encrypted called --> cypher text
+    //  is being generated and we divide this cipher text into chunks.
+
+
+    ifstream in_file("cipher.txt", ios::binary); 
     in_file.seekg(0, ios::end);
     int file_size = in_file.tellg();
     cout<<"Size of the file is"<<" "<< file_size<<" "<<"bytes";
+
+    cout<<endl;
+
+    cout<<"Enter path where you want to store the chunks:";
+	string chunkPath;
+    getline(cin,chunkPath);
 
     int chunkSize;
 	cout<<endl;
@@ -174,17 +186,43 @@ int main()
 
     cout<<"Creating the File Chunks."<<endl;
 
-    chunkFile("cipher.txt", "chunk", chunkByte+1);
+    chunkFile("cipher.txt", "chunk", chunkByte+1,chunkPath);
 
     string decryptKey;
 
     cout<<"Enter Key for Decryption:";
     cin>>decryptKey;
 
+    string newpath = "D:\\Cubbit Assesment\\The-Horcrux-Project\\SourceFiles\\";
+    string oldpath = chunkPath+"\\";
+    
+
     if(decryptKey==keyStr)
     {
         cout<<"The Key is Right."<<endl;
         cout<<"Regrouping the File."<<endl;
+
+        //before regrouping hame chunkFiles k ander ka material bahar sourcefolder maio dalna hai
+
+        DIR *dir;
+        struct dirent *ent;
+        if ((dir = opendir (oldpath.c_str())) != NULL) 
+        {
+            /* print all the files and directories within directory */
+            while ((ent = readdir (dir)) != NULL) 
+            {
+                printf ("%s\n", ent->d_name);
+                rename((oldpath+ent->d_name).c_str(),(newpath+ent->d_name).c_str());
+            }
+            closedir (dir);
+        } 
+        else 
+        {
+            /* could not open directory */
+            perror ("");
+            return EXIT_FAILURE;
+        }
+
 
         joinFile("chunk", "regrouped.txt");
 

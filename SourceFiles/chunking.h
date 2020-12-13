@@ -2,10 +2,10 @@
  #include<fstream>
  using namespace std;
 
-
 // Chunks a file by breaking it up into chunks of "chunkSize" bytes.
-void chunkFile(char *fullFilePath, char *chunkName, unsigned long chunkSize) 
+void chunkFile(char *fullFilePath, char *chunkName, unsigned long chunkSize, string outpath) 
 {
+
 	ifstream fileStream;
 	fileStream.open(fullFilePath, ios::in | ios::binary);
 
@@ -34,7 +34,7 @@ void chunkFile(char *fullFilePath, char *chunkName, unsigned long chunkSize)
 			fullChunkName.append(intBuf);
 
 			// Open new chunk file name for output
-			output.open(fullChunkName.c_str(),ios::out | ios::trunc | ios::binary);
+			output.open((outpath+"/"+fullChunkName).c_str(),ios::out | ios::trunc | ios::binary);
 
 			// If chunk file opened successfully, read from input and 
 			// write to output chunk. Then close.
