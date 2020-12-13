@@ -4,7 +4,7 @@
 #include <iostream>  
 #include <string>  
 #include <ctime>
-#include<dirent.h>
+#include <dirent.h>
 using namespace std;   
 
 // Utility Header Files.
@@ -103,13 +103,22 @@ void KeyExpansion(byte key[4*Nk], word w[4*(Nr+1)])
 
 int main()
 {
-      
+
+    // // INTRODUCTION.
+    // cout<<"WELCOME TO PROJECT HORCRUX, YOUR PRIVACY IS OUR PRIORITY";
+    // cout<<endl;
+
+
+    // cout<<"Please enter your choice-"<<endl;
+    // cout<<"Press 'E' for Encrypting your file."<<endl;
+    // cout<<"Press 'D' for Decrypting your file."<<endl;
+
     srand(time(NULL)); 
+
 
     cout<<"Generating secret key kindly store it for future reference...."<<endl;
     
-    int n=16;
-    string keyStr = printRandomString(n); 
+    string keyStr = printRandomString(); 
     
     cout << "The key is:"<<keyStr<<endl;
     
