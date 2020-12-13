@@ -61,7 +61,7 @@ void joinFile(char *chunkName, char *fileOutput) {
 		// Close output file.
 		outputfile.close();
 
-		cout << "File assembly complete!" << endl;
+		cout << "Horcruxes assembled successfully!" << endl;
 	}
 	else { cout << "Error: Unable to open file for output." << endl; }
 

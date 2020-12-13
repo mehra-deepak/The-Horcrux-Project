@@ -53,7 +53,7 @@ void chunkFile(char *fullFilePath, char *chunkName, unsigned long chunkSize, str
 
 		// Close input file stream.
 		fileStream.close();
-		cout << "Chunking complete! " << counter - 1 << " files created." << endl;
+		cout << "Horcruxes Created Successfully! " << counter - 1 << " Horcruxes created." << endl;
 	}
 	else { cout << "Error opening file!" << endl; }
 }

@@ -104,56 +104,44 @@ void KeyExpansion(byte key[4*Nk], word w[4*(Nr+1)])
 int main()
 {
 
-    // // INTRODUCTION.
-    // cout<<"WELCOME TO PROJECT HORCRUX, YOUR PRIVACY IS OUR PRIORITY";
-    // cout<<endl;
+    // Introduction.
+    cout<<"\n\n\n\n\n";
+    cout<<"-------------------------WELCOME TO PROJECT HORCRUX, YOUR PRIVACY IS OUR PRIORITY-------------------------";
+    cout<<"\n\n\n";
 
 
-    // cout<<"Please enter your choice-"<<endl;
-    // cout<<"Press 'E' for Encrypting your file."<<endl;
-    // cout<<"Press 'D' for Decrypting your file."<<endl;
-
+    // CODE : For generating random secret key.
     srand(time(NULL)); 
-
-
     cout<<"Generating secret key kindly store it for future reference...."<<endl;
-    
     string keyStr = printRandomString(); 
-    
-    cout << "The key is:"<<keyStr<<endl;
-    
+
+
+    // CODE : TO-DO;  Convert string key to base64 format.
+    cout << "The key is: "<<keyStr<<endl;
     byte key[16];   
     charToByte(key, keyStr.c_str()); 
+    cout<<"\n\n\n";
 
-    // Key Expansion
+
+    // CODE : Key Expansion
     word w[4*(Nr+1)];  
     KeyExpansion(key, w); 
-
-    cout<<endl; 
-
-
     bitset<128> data;  
-
     byte plain[16]; 
 
-    // Ask for location of the file.
 
-    cout<<"Enter the Path of the File you want to encrypt."<<endl;
-
+    // CODE : Ask for the path of the location where the file to be encrypted is located.
+    cout<<"Enter the path of the file you want to encrypt:";
     string path;
     getline(cin,path);
+    
 
-
+    // CODE : For encrypting the file.
     cout<<"Encrypting the File."<<endl;
-
-    // Encrypt
-
     ifstream in;  
     ofstream out;  
-
     in.open(path.c_str(),ios::in); 
     out.open("cipher.txt", ios::binary);  
-
     while(in.read((char*)&data, sizeof(data)))  
     {  
         divideToByte(plain, data);  
@@ -164,52 +152,52 @@ int main()
     }  
     in.close();  
     out.close();  
+    cout<<"File Encrypted Successfully.";
+    cout<<"\n\n\n";
 
-    cout<<"File Encrypted Successfully."<<endl;
-
-
-    // after the path of file is being taken a new encrypted called --> cypher text
-    //  is being generated and we divide this cipher text into chunks.
-
-
+    // After the file is encrypted it will be stored in the same location where all the 
+    // other source code files are located and will be named as "cipher.txt"
     ifstream in_file("cipher.txt", ios::binary); 
     in_file.seekg(0, ios::end);
     int file_size = in_file.tellg();
-    cout<<"Size of the file is"<<" "<< file_size<<" "<<"bytes";
+    cout<<"Size of encrypted file is"<<" "<< file_size<<" "<<"bytes";
+    cout<<"\n\n\n";
 
-    cout<<endl;
 
-    cout<<"Enter path where you want to store the chunks:";
+    // CODE: To store the Horcruxes.
+    cout<<"To ensure the utmost privacy we will now divide the files into HORCRUXES, worry not your data is safe with us.";
+    cout<<"\n\n\n";
+
+    cout<<"Enter the path where you want to store the Horcruxes:";
 	string chunkPath;
     getline(cin,chunkPath);
 
+
+    //CODE : To divide into horcruxes.
     int chunkSize;
 	cout<<endl;
-	cout<<"Enter how many chunks you want to create : "<<endl;
+	cout<<"Enter how many Horcrux(es) you want to create:";
 	cin>>chunkSize;
-
 	int chunkByte = file_size/chunkSize;
 
-
-    // Code for dividing into chunks.
-
-    cout<<"Creating the File Chunks."<<endl;
-
+    cout<<"Creating the Horcruxes."<<endl;
     chunkFile("cipher.txt", "chunk", chunkByte+1,chunkPath);
+    cout<<"\n\n\n";
 
+
+    // CODE : For Decryption.
     string decryptKey;
-
     cout<<"Enter Key for Decryption:";
     cin>>decryptKey;
-
     string newpath = "D:\\Cubbit Assesment\\The-Horcrux-Project\\SourceFiles\\";
     string oldpath = chunkPath+"\\";
     
 
     if(decryptKey==keyStr)
     {
+        cout<<"\n\n\n";
         cout<<"The Key is Right."<<endl;
-        cout<<"Regrouping the File."<<endl;
+        cout<<"Bringing up all the Horcruxes together."<<endl;
 
         //before regrouping hame chunkFiles k ander ka material bahar sourcefolder maio dalna hai
 
@@ -235,6 +223,10 @@ int main()
 
         joinFile("chunk", "regrouped.txt");
 
+        cout<<"\n\n\n";
+
+        cout<<"Decrypting the File"<<endl;
+
 
         in.open("regrouped.txt", ios::binary);  
         out.open("DecryptedText.txt", ios::binary);  
@@ -249,6 +241,8 @@ int main()
         in.close();  
         out.close();  
 
+        cout<<"\n\n\n";
+       
         cout<<"File has been Decrypted Successfully."<<endl;
 
        
