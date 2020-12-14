@@ -38,9 +38,8 @@ For the process of Decryption, the user is asked for the secret reference key wh
 ## References.
 
 1) [Cryptogrpahy Algorithms](https://www.simplilearn.com/data-encryption-methods-article)
-2) [AES algorrithm](https://searchsecurity.techtarget.com/definition/Advanced-Encryption-Standard#:~:text=The%20Advanced%20Encryption%20Standard%20(AES,cybersecurity%20and%20electronic%20data%20protection.)
-3) [AES128](https://www.idera.com/glossary/aes-128-bit-encryption)
-4) [AES256](https://www.atpinc.com/blog/what-is-aes-256-encryption)
+2) [AES128](https://www.idera.com/glossary/aes-128-bit-encryption)
+3) [AES256](https://www.atpinc.com/blog/what-is-aes-256-encryption)
 
 
 
