@@ -21,6 +21,20 @@ For the process of Decryption, the user is asked for the secret reference key wh
 
 4) GCC compiler to Windows : MinGW64.
 
+## Time Line of the Project.
+
+* Date : 10/12/2020.
+Look
+
+* Date : 11/12/2020.
+
+* Date : 12/12/2020.
+Created the github repo and added the code 
+
+* Date : 13/12/2020.
+
+* Date : 14/12/2020.
+
 ## Process Flow.
 
 ### FOR ENCRYPTION.
@@ -30,6 +44,7 @@ For the process of Decryption, the user is asked for the secret reference key wh
 ### FOR DECRYPTION.
 
 ![decryption flow chart](https://github.com/mehra-deepak/The-Horcrux-Project./blob/main/Images/From%20Decryption.png)
+
 
 ## How to test this project.
 
@@ -50,7 +65,7 @@ For the process of Decryption, the user is asked for the secret reference key wh
 
 1)  Through this project i got to know about the seamless power of C++, and learnt a lot about cryptography and how porgrammers incorporate encryption for hiding useful information.
 2) My enthusiasm for privacy preservation has levaraged up and i'm willing to explore more in the same direction.
-3) This program can be certainly modified into more robust and clean application by investing more time and seeking mentorship from proficient developers and cryptographers.
+3) This program can be certainly modified into more robust and clean application by investing more time and seeking mentorship from proficient developers and cryptographers and i'm looking forward to improve it and add more functionality to it.
 4) Overall the project brought immense leanring experince for me and i'm elated having explored this side of software development and this domain of software engineering.
 
 THANK YOU,VERY MUCH, E BUONA GIORNATA.
