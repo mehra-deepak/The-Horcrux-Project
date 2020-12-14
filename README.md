@@ -24,16 +24,24 @@ For the process of Decryption, the user is asked for the secret reference key wh
 ## Time Line of the Project.
 
 * Date : 10/12/2020.
-Look
+
+Looked after the resources and got familiar with cryptogrpahic algorithms and maths behind them.
 
 * Date : 11/12/2020.
 
+Did wireframing of the project and build the prototype. 
+
 * Date : 12/12/2020.
-Created the github repo and added the code 
+
+Created the github repo started to code and pushed the base code.
 
 * Date : 13/12/2020.
 
+CODE! CODE! CODE!  Searching, Manipulating, Debugging, Pushing into Github.
+
 * Date : 14/12/2020.
+
+Refactoring the code and finshing up with final touches.
 
 ## Process Flow.
 
@@ -68,7 +76,7 @@ Created the github repo and added the code
 3) This program can be certainly modified into more robust and clean application by investing more time and seeking mentorship from proficient developers and cryptographers and i'm looking forward to improve it and add more functionality to it.
 4) Overall the project brought immense leanring experince for me and i'm elated having explored this side of software development and this domain of software engineering.
 
-THANK YOU,VERY MUCH, E BUONA GIORNATA.
+Until then, THANK YOU VERY MUCH, E BUONA GIORNATA.
 
 
 
