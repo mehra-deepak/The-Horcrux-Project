@@ -15,8 +15,9 @@ Encryption Algorithm : AES128.
 
 ### FOR ENCRYPTION.
 
+![encryption-flow-chart](https://github.com/mehra-deepak/The-Horcrux-Project./blob/main/Images/Encryption.png)
 
 ### FOR DECRYPTION.
 
-
+![decryption flow chart](https://github.com/mehra-deepak/The-Horcrux-Project./blob/main/Images/From%20Decryption.png)
 
