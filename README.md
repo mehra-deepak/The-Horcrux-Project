@@ -13,5 +13,10 @@ Encryption Algorithm : AES128.
 
 ## Process Flow.
 
+### FOR ENCRYPTION.
+
+
+### FOR DECRYPTION.
+
 
 
