@@ -14,6 +14,8 @@ using namespace std;
 #include "encrypt.h"
 #include "chunking.h"
 #include "reGrouping.h"
+#include "base64format.h"
+#include "getCurrentWorkingDirectory.h"
 
 
 
@@ -117,10 +119,12 @@ int main()
 
 
     // CODE : TO-DO;  Convert string key to base64 format.
-    cout << "The key is: "<<keyStr<<endl;
     byte key[16];   
     charToByte(key, keyStr.c_str()); 
     cout<<"\n\n\n";
+
+    string base64FormatKey = base64_encode(keyStr);
+    cout<<"The Base64 encoded secret key is:"<<base64FormatKey<<endl; 
 
 
     // CODE : Key Expansion
@@ -189,11 +193,12 @@ int main()
     string decryptKey;
     cout<<"Enter Key for Decryption:";
     cin>>decryptKey;
-    string newpath = "D:\\Cubbit Assesment\\The-Horcrux-Project\\SourceFiles\\";
+    string currpath = get_current_dir();
+    string newpath = currpath+"\\";
     string oldpath = chunkPath+"\\";
     
 
-    if(decryptKey==keyStr)
+    if(decryptKey==base64FormatKey)
     {
         cout<<"\n\n\n";
         cout<<"The Key is Right."<<endl;
