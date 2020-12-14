@@ -1,5 +1,9 @@
 # The-Horcrux-Project.
 
+<p align="center">
+<img src="https://github.com/mehra-deepak/The-Horcrux-Project./blob/main/Images/NEVPrOxFHG.svg">
+</p>
+
 ## Introduction.
 The Horcrux project enables user to adapt a, 2 stage advanced encryption process to enable privacy preservation and conservation of files with paramount security measures. It let's users to encrypt, split and save copies of their files in the filesystem (the name “horcrux” is inspired by the Harry Potter saga). The file to be encrypted is selected by the user, and a secret random key is generated, the secret key is converted into Base64 format and provided to the user for future reference, restoration and decryption of file. The original file is then encrypted by AES-128 encryption algorithm, and the file thus produced has an extension of ".txt" format, containing unreadable ciphered data. For stage 2 and to enable the utmost level of privacy the file is then split into 'n' number of Horcruxes, (smaller atomic files/ chunks) where n is the number of horcruxes defined by user.The horcruxes are then stored at the user's specified location. 
 
@@ -29,7 +33,7 @@ For the process of Decryption, the user is asked for the secret reference key wh
 
 ## How to test this project.
 
-1) Fork this repository.
+1) Fork this repository
 
 2) Clone to make a native copy.
 
@@ -40,7 +44,16 @@ For the process of Decryption, the user is asked for the secret reference key wh
 1) [Cryptogrpahy Algorithms](https://www.simplilearn.com/data-encryption-methods-article)
 2) [AES128](https://www.idera.com/glossary/aes-128-bit-encryption)
 3) [AES256](https://www.atpinc.com/blog/what-is-aes-256-encryption)
+4) [Base64 encoding](https://developer.mozilla.org/en-US/docs/Glossary/Base64)
 
+## Foot Notes.
+
+1)  Through this project i got to know about the seamless power of C++, and learnt a lot about cryptography and how porgrammers incorporate encryption for hiding useful information.
+2) My enthusiasm for privacy preservation has levaraged up and i'm willing to explore more in the same direction.
+3) This program can be certainly modified into more robust and clean application by investing more time and seeking mentorship from proficient developers and cryptographers.
+4) Overall the project brought immense leanring experince for me and i'm elated having explored this side of software development and this domain of software engineering.
+
+THANK YOU,VERY MUCH, E BUONA GIORNATA.
 
 
 
