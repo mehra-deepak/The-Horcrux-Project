@@ -7,9 +7,15 @@ For the process of Decryption, the user is asked for the secret reference key wh
 
 ## Specifications.
 
-Language Used : C++.
+1) Language Used : C++.
 
-Encryption Algorithm : AES128.
+2) Encryption Algorithm : AES128.
+
+3) IDE used : Visual Studio Code.
+
+4) Operating System : Windows 10.
+
+4) GCC compiler to Windows : MinGW64.
 
 ## Process Flow.
 
@@ -20,4 +26,22 @@ Encryption Algorithm : AES128.
 ### FOR DECRYPTION.
 
 ![decryption flow chart](https://github.com/mehra-deepak/The-Horcrux-Project./blob/main/Images/From%20Decryption.png)
+
+## How to test this project.
+
+1) Fork this repository.
+
+2) Clone to make a native copy.
+
+3) Run the "main.cpp" file.
+
+## References.
+
+1) [Cryptogrpahy Algorithms](https://www.simplilearn.com/data-encryption-methods-article)
+2) [AES algorrithm](https://searchsecurity.techtarget.com/definition/Advanced-Encryption-Standard#:~:text=The%20Advanced%20Encryption%20Standard%20(AES,cybersecurity%20and%20electronic%20data%20protection.)
+3) [AES128](https://www.idera.com/glossary/aes-128-bit-encryption)
+4) [AES256](https://www.atpinc.com/blog/what-is-aes-256-encryption)
+
+
+
 
