@@ -29,7 +29,7 @@ Looked after the resources and got familiar with cryptogrpahic algorithms and ma
 
 * Date : 11/12/2020.
 
-Did wireframing of the project and build the prototype. 
+Did wireframing of the project and build the prototype, more of R & D work.
 
 * Date : 12/12/2020.
 
@@ -42,6 +42,15 @@ CODE! CODE! CODE!  Searching, Manipulating, Debugging, Pushing into Github.
 * Date : 14/12/2020.
 
 Refactoring the code and finshing up with final touches.
+
+
+* Date : 15/12/2020.
+
+Looked after some more resources for improvement in the modules prepared flowchart and readme.
+
+* Date : 14/12/2020.
+
+Demo Video content and some final commits.
 
 ## Process Flow.
 
@@ -67,6 +76,14 @@ Refactoring the code and finshing up with final touches.
 2) Clone to make a native copy.
 
 3) Run the "main.cpp" file.
+
+# What More can be done.
+
+1) Reading about advancded crypto algorithms for making it even more robust.
+
+2) Using hashtables for strong the horcruxes and the key as primary key for future references and decryption.
+
+3) The domain has vast scope of improvement as security is a myth.
 
 ## References.
 
