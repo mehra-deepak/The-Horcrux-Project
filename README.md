@@ -66,7 +66,6 @@ Demo Video content and some final commits.
 
 [Click Here for Demo Video](https://drive.google.com/file/d/1T-yNbnYC1hekgtYQbu2oiHPwF59mNmbn/view?usp=sharing)
 
-![demo comments image](https://github.com/mehra-deepak/The-Horcrux-Project/blob/main/Images/Screenshot%20(14).png)
 
 
 ## How to test this project.
