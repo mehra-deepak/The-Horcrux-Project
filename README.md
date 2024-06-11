@@ -62,9 +62,6 @@ Demo Video content and some final commits.
 
 ![decryption flow chart](https://github.com/mehra-deepak/The-Horcrux-Project./blob/main/Images/From%20Decryption.png)
 
-# DEMO VIDEO
-
-[Click Here for Demo Video](https://drive.google.com/file/d/1T-yNbnYC1hekgtYQbu2oiHPwF59mNmbn/view?usp=sharing)
 
 
 
